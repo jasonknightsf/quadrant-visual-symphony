@@ -25,20 +25,22 @@ const UserAnalyticsChart = () => {
             dataKey="week" 
             axisLine={false}
             tickLine={false}
-            tick={{ fontSize: 12, fill: '#6b7280' }}
+            tick={{ fontSize: 12, fill: '#616161', fontFamily: 'Roboto, sans-serif' }}
           />
           <YAxis 
             axisLine={false}
             tickLine={false}
-            tick={{ fontSize: 12, fill: '#6b7280' }}
+            tick={{ fontSize: 12, fill: '#616161', fontFamily: 'Roboto, sans-serif' }}
             tickFormatter={(value) => `${value / 1000}k`}
           />
           <Tooltip 
             contentStyle={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              backgroundColor: '#ffffff',
               border: 'none',
               borderRadius: '8px',
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+              fontSize: '14px',
+              fontFamily: 'Roboto, sans-serif',
             }}
             formatter={(value: number, name: string) => [
               value.toLocaleString(),
@@ -46,18 +48,18 @@ const UserAnalyticsChart = () => {
             ]}
           />
           <Legend 
-            wrapperStyle={{ paddingTop: '20px' }}
+            wrapperStyle={{ paddingTop: '20px', fontSize: '14px', fontFamily: 'Roboto, sans-serif' }}
             iconType="circle"
           />
           <Bar 
             dataKey="newUsers" 
-            fill="#8b5cf6" 
+            fill="#1976d2" 
             radius={[4, 4, 0, 0]}
             name="newUsers"
           />
           <Bar 
             dataKey="returningUsers" 
-            fill="#06b6d4" 
+            fill="#00acc1" 
             radius={[4, 4, 0, 0]}
             name="returningUsers"
           />

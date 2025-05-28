@@ -2,12 +2,12 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const data = [
-  { name: "Organic Search", value: 42, color: "#3b82f6" },
-  { name: "Direct", value: 28, color: "#10b981" },
-  { name: "Social Media", value: 15, color: "#f59e0b" },
-  { name: "Email Marketing", value: 8, color: "#8b5cf6" },
-  { name: "Paid Ads", value: 5, color: "#ef4444" },
-  { name: "Referrals", value: 2, color: "#6b7280" },
+  { name: "Organic Search", value: 42, color: "#1976d2" },
+  { name: "Direct", value: 28, color: "#388e3c" },
+  { name: "Social Media", value: 15, color: "#f57c00" },
+  { name: "Email Marketing", value: 8, color: "#7b1fa2" },
+  { name: "Paid Ads", value: 5, color: "#d32f2f" },
+  { name: "Referrals", value: 2, color: "#616161" },
 ];
 
 const TrafficSourcesChart = () => {
@@ -35,10 +35,11 @@ const TrafficSourcesChart = () => {
           </Pie>
           <Tooltip 
             contentStyle={{
-              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              backgroundColor: '#ffffff',
               border: 'none',
               borderRadius: '8px',
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+              fontSize: '14px',
             }}
             formatter={(value: number) => [`${value}%`, 'Traffic Share']}
           />
@@ -46,7 +47,7 @@ const TrafficSourcesChart = () => {
             verticalAlign="bottom" 
             height={36}
             iconType="circle"
-            wrapperStyle={{ paddingTop: '20px', fontSize: '12px' }}
+            wrapperStyle={{ paddingTop: '20px', fontSize: '14px', fontFamily: 'Roboto, sans-serif' }}
           />
         </PieChart>
       </ResponsiveContainer>
